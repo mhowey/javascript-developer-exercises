@@ -15,12 +15,13 @@ function paintMixer(color1, color2) {
   const colors = [color1, color2];
   if (colors.includes('blue') && colors.includes('red')) {
     return 'purple';
-  } else if (colors.includes('red') && colors.includes('green')) {
+  } else if (
+    (colors.includes('red') && colors.includes('green')) ||
+    (colors.includes('green') && colors.includes('red'))
+  ) {
     return 'brown';
   } else if (colors.includes('red') && colors.includes('yellow')) {
     return 'orange';
-  } else if (colors.includes('green') && colors.includes('red')) {
-    return 'brown';
   } else if (colors.includes('blue') && colors.includes('yellow')) {
     return 'green';
   } else if (colors.includes('apple') && colors.includes('frog')) {
