@@ -1,12 +1,6 @@
-var words = [
-  'cat',
-  'zone',
-  'supper',
-  'find',
-  'storm',
-]
+var words = ['cat', 'zone', 'supper', 'find', 'storm'];
 
-var wordList = "You need to save your words into wordList"
+var wordList = 'You need to save your words into wordList';
 
 /*
 Process the array so that you take the word formed by the second and
@@ -22,6 +16,14 @@ before the next comment block.
 */
 // PLACE YOUR CODE BELOW
 
+let newList = [];
+
+words.forEach((word) => {
+  newList.push(word.substr(1, 2));
+});
+
+wordList = newList.join(', ');
+
 // PLACE YOUR CODE ABOVE
 /*
 When run with "node 2_extracting_words.js" you should see the following on
@@ -31,5 +33,5 @@ Success
 at, on, in, up, to
 */
 
-wordList === 'at, on, up, in, to' && console.log('Success')
-console.log(wordList)
+wordList === 'at, on, up, in, to' && console.log('Success');
+console.log(wordList);

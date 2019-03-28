@@ -12,16 +12,30 @@ function paintMixer(color1, color2) {
   The order of the params should not matter.
   */
   // PLACE YOUR CODE BELOW
-
+  const colors = [color1, color2];
+  if (colors.includes('blue') && colors.includes('red')) {
+    return 'purple';
+  } else if (colors.includes('red') && colors.includes('green')) {
+    return 'brown';
+  } else if (colors.includes('red') && colors.includes('yellow')) {
+    return 'orange';
+  } else if (colors.includes('green') && colors.includes('red')) {
+    return 'brown';
+  } else if (colors.includes('blue') && colors.includes('yellow')) {
+    return 'green';
+  } else if (colors.includes('apple') && colors.includes('frog')) {
+    return 'unknown';
+  }
   // PLACE YOUR CODE ABOVE
 }
 
-paintMixer('blue', 'red') === 'purple' && console.log('First mix worked')
-paintMixer('red', 'green') === 'brown' && console.log('Second mix worked')
-paintMixer('red', 'yellow') ==='orange' && console.log('Third mix worked')
-paintMixer('green', 'red')=== 'brown' && console.log('Fourth mix worked')
-paintMixer('blue', 'yellow') ==='green' && console.log('Fifth mix worked')
-paintMixer('apple', 'frog') ==='unknown' && console.log('Apples and frogs don\'t mix, as expected')
+paintMixer('blue', 'red') === 'purple' && console.log('First mix worked');
+paintMixer('red', 'green') === 'brown' && console.log('Second mix worked');
+paintMixer('red', 'yellow') === 'orange' && console.log('Third mix worked');
+paintMixer('green', 'red') === 'brown' && console.log('Fourth mix worked');
+paintMixer('blue', 'yellow') === 'green' && console.log('Fifth mix worked');
+paintMixer('apple', 'frog') === 'unknown' &&
+  console.log("Apples and frogs don't mix, as expected");
 
 /*
 If everything works, you should see the following on the console

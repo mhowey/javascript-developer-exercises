@@ -1,24 +1,34 @@
-let assert = require('assert')
+let assert = require('assert');
 
 /*
   Given the variable 'statement' below, write a function that reverses
   the letters in each word, but leaves the words in the same order
 */
 
-let statement = 'Penn Mutual sells life insurance'
+let statement = 'Penn Mutual sells life insurance';
 
 function reverseLetters(str) {
   // PLACE YOUR CODE BELOW
-
-
+  var reverseArray = statement.split(' ');
+  newReverseArray = reverseArray.map((word) => {
+    return word
+      .split('')
+      .reverse()
+      .join('');
+  });
+  return newReverseArray.join(' ');
   // PLACE YOUR CODE ABOVE
 }
 
-let reversedWords = reverseLetters(statement)
+let reversedWords = reverseLetters(statement);
 
-assert.equal(reversedWords, 'nneP lautuM slles efil ecnarusni', 'Strings are not equal') || console.log('Success')
+assert.equal(
+  reversedWords,
+  'nneP lautuM slles efil ecnarusni',
+  'Strings are not equal'
+) || console.log('Success');
 
-console.log(reversedWords)
+console.log(reversedWords);
 
 /*
   Your console output should look like the following

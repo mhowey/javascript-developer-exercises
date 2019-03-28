@@ -1,4 +1,4 @@
-const assert = require('assert')
+const assert = require('assert');
 
 const initialArray = [
   {
@@ -6,60 +6,60 @@ const initialArray = [
     members: [
       {
         name: 'John',
-        vehicleMake: 'BMW',
+        vehicleMake: 'BMW'
       },
       {
         name: 'Michael',
-        vehicleMake: 'Hyundai',
-      },
-    ],
+        vehicleMake: 'Hyundai'
+      }
+    ]
   },
   {
     id: 2,
     members: [
       {
         name: 'Aurora',
-        vehicleMake: 'Subaru',
+        vehicleMake: 'Subaru'
       },
       {
         name: 'Chris',
-        vehicleMake: 'Huffy',
-      },
-    ],
+        vehicleMake: 'Huffy'
+      }
+    ]
   },
   {
     id: 3,
     members: [
       {
         name: 'Matt',
-        vehicleMake: 'Volkswagen',
+        vehicleMake: 'Volkswagen'
       },
       {
         name: 'Paul',
-        vehicleMake: 'Ford',
+        vehicleMake: 'Ford'
       },
       {
         name: 'Mark',
-        vehicleMake: 'Ford',
-      },
-    ],
-  },
-]
+        vehicleMake: 'Ford'
+      }
+    ]
+  }
+];
 
 const expectedArray = [
   {
     rideShareId: 1,
-    numberMembers: 2,
+    numberMembers: 2
   },
   {
     rideShareId: 2,
-    numberMembers: 2,
+    numberMembers: 2
   },
   {
     rideShareId: 3,
-    numberMembers: 3,
-  },
-]
+    numberMembers: 3
+  }
+];
 
 function convertRideshareArray(array) {
   var newArray = array.map(function(element) {
@@ -69,13 +69,22 @@ function convertRideshareArray(array) {
     */
     // PLACE YOUR CODE BELOW
 
-    // PLACE YOUR CODE ABOVE
-  })
+    return {
+      rideShareId: element.id,
+      numberMembers: element.members.length
+    };
 
-  return newArray
+    // PLACE YOUR CODE ABOVE
+  });
+
+  return newArray;
 }
 
-assert.deepEqual(expectedArray, convertRideshareArray(initialArray), 'Arrays are not equal') || console.log('Success')
+assert.deepEqual(
+  expectedArray,
+  convertRideshareArray(initialArray),
+  'Arrays are not equal'
+) || console.log('Success');
 
 /*
 When run with "node 3_data_transformation.js" you should see the
